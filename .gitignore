@@ -1,0 +1,49 @@
+# =============================================
+# ArtComm 프로젝트 공통 .gitignore
+# =============================================
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# ------- Front (Vite/React) -------
+front/dist/
+front/.cache/
+
+# ------- Back (Spring Boot/Gradle) -------
+back/.gradle/
+back/build/
+back/out/
+back/bin/
+back/HELP.md
+!back/gradle/wrapper/gradle-wrapper.jar
+
+# Spring
+*.jar
+!back/gradle/wrapper/*.jar
+
+# OAuth2 설정 파일 (민감 정보 포함)
+**/application-oauth.yml

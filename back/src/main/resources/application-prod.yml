@@ -1,0 +1,5 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate  # 운영 환경에서는 검증만
+    show-sql: false
