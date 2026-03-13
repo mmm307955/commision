@@ -25,6 +25,9 @@ build/
 .DS_Store
 Thumbs.db
 
+# Temp notes
+vun.md
+
 # Logs
 *.log
 npm-debug.log*
@@ -45,5 +48,3 @@ back/HELP.md
 *.jar
 !back/gradle/wrapper/*.jar
 
-# OAuth2 설정 파일 (민감 정보 포함)
-**/application-oauth.yml
