@@ -17,7 +17,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:5173", "http://localhost:3000")
+                        .allowedOrigins("http://localhost:5173", "http://localhost:3000", "https://victorious-sky-0bae2b900.1.azurestaticapps.net")
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true)
