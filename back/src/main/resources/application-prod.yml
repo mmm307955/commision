@@ -7,3 +7,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+
+app:
+  frontend-url: https://victorious-sky-0bae2b900.1.azurestaticapps.net
