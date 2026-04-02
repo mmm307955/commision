@@ -1,0 +1,44 @@
+# CodeRabbit 설정 파일
+# 문서: https://docs.coderabbit.ai/getting-started/configure-coderabbit
+
+language: "ko-KR"
+
+reviews:
+  profile: "assertive"          # 꼼꼼하게 리뷰 (chill = 가볍게)
+  request_changes_workflow: false
+  high_level_summary: true      # PR 요약 자동 생성
+  poem: false                   # PR마다 시 쓰는 기능 OFF
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false               # 드래프트 PR은 리뷰 안 함
+
+  # 리뷰 제외할 파일/폴더
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/.env"
+    - "!**/.env.*"
+    - "!**/dist/**"
+    - "!**/build/**"
+    - "!**/*.min.js"
+    - "!**/.idea/**"
+    - "!**/.vscode/**"
+
+  # 경로별 리뷰 가이드라인
+  path_instructions:
+    - path: "back/**"
+      instructions: |
+        Spring Boot 백엔드 코드입니다.
+        - JWT 토큰 처리 및 보안 취약점 확인
+        - .env나 하드코딩된 시크릿 키가 없는지 확인
+        - 카카오 OAuth 관련 예외 처리 확인
+    - path: "front/**"
+      instructions: |
+        프론트엔드 코드입니다.
+        - 환경변수에 민감한 정보가 노출되지 않는지 확인
+        - API 호출 시 에러 핸들링 확인
+        - 사용자 위치 정보 처리 보안 확인
+
+chat:
+  auto_reply: true              # CodeRabbit 멘션 시 자동 답장
